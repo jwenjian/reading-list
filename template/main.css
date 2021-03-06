@@ -25,7 +25,6 @@ ul {
 ul li {
   max-width: 80vw;
   border: hotpink 1px solid;
-  height: 2em;
   padding: 0.25em;
   list-style-type: '📖';
   list-style-position: inside;
@@ -38,8 +37,8 @@ ul li a {
   width: 90%;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
   padding-left: 0.5em;
+  vertical-align: top;
 }
 
 ul li:hover {
