@@ -1,0 +1,40 @@
+body {
+  font-family: 'Roboto Mono', monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.data-list {
+  text-align: left;
+}
+
+ul {
+  padding-left: 0;
+}
+
+ul li {
+  max-width: 80vw;
+  border: hotpink 1px solid;
+  height: 2em;
+  padding: 0.25em;
+  list-style-type: '📖';
+  margin-top: 0.5em;
+  border-radius: 5px;
+}
+
+ul li:hover {
+  box-shadow: hotpink 5px 5px;
+}
+
+mark {
+  background-color: hotpink;
+}
