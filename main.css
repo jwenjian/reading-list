@@ -15,6 +15,7 @@ body {
 
 .data-list {
   text-align: left;
+  width: 80vw;
 }
 
 ul {
