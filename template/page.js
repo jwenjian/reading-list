@@ -12,8 +12,8 @@ fetch('./data.json')
   items.forEach(i => {
     const li = document.createElement('li');
     const a = document.createElement('a');
-    a.href = item.html_url
-    a.innerText = item.title
+    a.href = i.html_url
+    a.innerText = i.title
     a.target = '_blank'
     li.appendChild(a);
     fragment.appendChild(li);
