@@ -27,8 +27,18 @@ ul li {
   height: 2em;
   padding: 0.25em;
   list-style-type: '📖';
+  list-style-position: inside;
   margin-top: 0.5em;
   border-radius: 5px;
+}
+
+ul li a {
+  display: inline-block;
+  width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-left: 0.5em;
 }
 
 ul li:hover {
