@@ -1,5 +1,5 @@
 const currentDate = new Date()
-document.getElementById('current-date').innerText = `${currentDate.getFullYear()}-${currentDate.getMonth() + 1}-${currentDate.getDay()}`
+document.getElementById('current-date').innerText = `${currentDate.getFullYear()}-${currentDate.getMonth() + 1}-${currentDate.getDate()}`
 
 fetch('./data.json')
 .then(async function (response) {
