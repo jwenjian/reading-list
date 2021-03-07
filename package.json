@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jwenjian/reading-list.git"
+    "url": "git+https://github.com/n0jack/reading-list.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jwenjian/reading-list/issues"
+    "url": "https://github.com/n0jack/reading-list/issues"
   },
-  "homepage": "https://github.com/jwenjian/reading-list#readme",
+  "homepage": "https://github.com/n0jack/reading-list#readme",
   "dependencies": {
     "@octokit/rest": "^18.3.4",
     "node-fetch": "^2.6.1"
