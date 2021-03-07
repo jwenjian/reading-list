@@ -1,7 +1,7 @@
 const { Octokit } = require("@octokit/rest")
 const fs = require('fs')
 const now = new Date()
-const startOfTheDay = new Date(now.getFullYear(), now.getMonth(), now.getDay(), 0, 0, 0, 0)
+const startOfTheDay = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 0, 0, 0, 0)
 
 const octokit = new Octokit(
   {
