@@ -48,3 +48,11 @@ ul li:hover {
 mark {
   background-color: hotpink;
 }
+
+.footer {
+  font-size: small;
+}
+
+.split-line {
+  border: 1px dashed hotpink;
+}
