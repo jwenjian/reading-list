@@ -4,7 +4,7 @@ document.getElementById('current-date').innerText = `${currentDate.getFullYear()
 fetch('./data.json')
 .then(async function (response) {
   const res = await response.json();
-  const items = res;
+  const items = res.today;
 
   const list = document.querySelector('.list');
   const fragment = document.createDocumentFragment();
@@ -20,4 +20,22 @@ fetch('./data.json')
   });
 
   list.appendChild(fragment);
+
+  // recent list
+
+
+  const recentList = document.querySelector('.recent-list');
+  const recentListFragment = document.createDocumentFragment();
+
+  recentItems.forEach(i => {
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    a.href = i.html_url
+    a.innerText = i.title
+    a.target = '_blank'
+    li.appendChild(a);
+    recentListFragment.appendChild(li);
+  });
+
+  recentList.appendChild(recentListFragment);
 })

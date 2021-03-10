@@ -10,23 +10,39 @@ const octokit = new Octokit(
 );
 
 async function main() {
+  let data = {
+    update_at: now,
+    today: [],
+    recent: []
+  }
   const resp = await octokit.issues.listForRepo({
     owner: 'jwenjian',
     repo: 'reading-list',
-    since: startOfTheDay.toISOString()
+    state: 'open',
+    per_page: 50
   })
-
-  console.log(startOfTheDay.toISOString())
 
   if (!resp || resp.status != 200) {
     console.error('Cannot get response from GitHub')
     return
   }
  
+  data.today = resp.data.filter(item => {
+    return Date.parse(item.created_at) > startOfTheDay.getTime()
+  })
+
+  let rest = resp.data.slice(resp.data.indexOf(data.today[data.today.length - 1]) + 1)
+
+  if (rest.length > 10) {
+    data.recent = rest.slice(0, 10)
+  } else {
+    data.recent = rest
+  }
+
   const issues = resp.data
   console.log(`${issues.length} issues got from GitHub`)
 
-  fs.writeFileSync('template/data.json', JSON.stringify(issues))
+  fs.writeFileSync('template/data.json', JSON.stringify(data))
   console.log('Issues write to data.json')
 
 }
