@@ -13,6 +13,10 @@ body {
   justify-content: center;
 }
 
+.wrapper h5 {
+  text-align: center;
+}
+
 .data-list {
   text-align: left;
   width: 80vw;
