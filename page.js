@@ -27,6 +27,8 @@ fetch('./data.json')
   const recentList = document.querySelector('.recent-list');
   const recentListFragment = document.createDocumentFragment();
 
+  const recentItems = res.recent;
+  
   recentItems.forEach(i => {
     const li = document.createElement('li');
     const a = document.createElement('a');
