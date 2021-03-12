@@ -2,6 +2,13 @@
 
 ![issues](https://badgen.net/github/issues/jwenjian/reading-list) ![watchers](https://badgen.net/github/watchers/jwenjian/reading-list) ![visitors](https://visitor-badge.glitch.me/badge?page_id=jwenjian.readling-list)
 
+## 部署地址
+
+- https://reading-list.pages.dev
+- https://todayiread.vercel.app
+- https://todayiread.netlify.app
+- https://jwenjian.github.io/reading-list
+
 ## 内容来源
 
 所有内容均来自于我的日常阅读列表, 大部分是通过 RSS 订阅的, 内容类型主要为 科技 / 软件 / 编程 / 开源 / 科普
