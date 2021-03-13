@@ -4,6 +4,12 @@ document.getElementById('current-date').innerText = `${currentDate.getFullYear()
 fetch('./data.json')
 .then(async function (response) {
   const res = await response.json();
+
+  // 上次更新时间
+  const updatedAt = document.getElementById('update_at')
+  updatedAt.innerText = res.update_at
+
+  // 当天阅读列表
   const items = res.today;
 
   const list = document.querySelector('.list');
@@ -21,9 +27,7 @@ fetch('./data.json')
 
   list.appendChild(fragment);
 
-  // recent list
-
-
+  // 近期阅读列表
   const recentList = document.querySelector('.recent-list');
   const recentListFragment = document.createDocumentFragment();
 
