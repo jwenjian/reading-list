@@ -4,7 +4,27 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+.header {
+  height: 5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-left {
+  text-align: left;
+  padding-left: 5vw;
+  font-size: x-large;
+}
+
+.menu-right {
+  padding-right: 5vw;
+}
+
+.menu-link {
+  display: inline-block;
 }
 
 .wrapper {
