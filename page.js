@@ -50,25 +50,3 @@ fetch('./data.json')
 
   recentList.appendChild(recentListFragment);
 })
-
-
-/**
- * 处理分享按钮点击
- * 
- * @param {点击事件} evt 
- */
-function handleShare(evt) {
-  console.log(navigator.share)
-  evt.preventDefault();
-  if (!navigator.share) {
-    console.warn('当前浏览器不支持 Web Share！');
-    return;
-  }
-
-  navigator.share({
-    text: document.querySelector('meta[name=description]').getAttribute('content'),
-    title: document.head.title,
-    url: window.location.href
-  }).then(() => {})
-  .catch(err => {console.error(err)})
-}
