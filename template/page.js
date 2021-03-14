@@ -23,7 +23,8 @@ fetch('./data.json')
   items.forEach(i => {
     const li = document.createElement('li');
     const a = document.createElement('a');
-    a.href = i.html_url
+    // 当天阅读列表直接跳转至原文链接，body只能包含原文链接，否则跳转不成功
+    a.href = i.body;
     a.innerText = i.title
     a.target = '_blank'
     li.appendChild(a);
