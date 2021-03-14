@@ -52,7 +52,7 @@ ul li {
   padding: 0.25em;
   list-style-type: '📖';
   list-style-position: inside;
-  margin-top: 0.5em;
+  margin-top: 0.9em;
   border-radius: 5px;
 }
 
@@ -63,6 +63,8 @@ ul li a {
   text-overflow: ellipsis;
   padding-left: 0.5em;
   vertical-align: top;
+  text-decoration: none;
+  color: #3e0238;
 }
 
 ul li:hover {
