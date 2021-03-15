@@ -1,9 +1,33 @@
+@media (prefers-color-scheme: light) {
+  :root {
+    --main-color: hotpink;
+    --link-color: #3e0238;
+    --bg-color: #fefefe;
+    --other-color: #2c3e50;
+  }
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-color: hotpink;
+    --link-color: #ffd5fb;
+    --bg-color: #121212;
+    --other-color: #6bb5ff;
+  }
+}
+
 body {
+  background-color: var(--bg-color);
   font-family: 'Roboto Mono', monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: var(--other-color);
+}
+
+a {
+  color: var(--link-color)
 }
 
 .header {
@@ -48,12 +72,13 @@ ul {
 
 ul li {
   max-width: 80vw;
-  border: hotpink 1px solid;
+  border: var(--main-color) 1px solid;
   padding: 0.25em;
   list-style-type: '📖';
   list-style-position: inside;
   margin-top: 0.9em;
   border-radius: 5px;
+  min-height: 2em;
 }
 
 ul li a {
@@ -64,15 +89,19 @@ ul li a {
   padding-left: 0.5em;
   vertical-align: top;
   text-decoration: none;
-  color: #3e0238;
+  color: var(--link-color);
+}
+
+ul li a:hover {
+ text-decoration: underline;
 }
 
 ul li:hover {
-  box-shadow: hotpink 5px 5px;
+  box-shadow: var(--main-color) 5px 5px;
 }
 
 mark {
-  background-color: hotpink;
+  background-color: var(--main-color);
 }
 
 .footer {
@@ -80,5 +109,5 @@ mark {
 }
 
 .split-line {
-  border: 1px dashed hotpink;
+  border: 1px dashed var(--main-color);
 }
