@@ -58,12 +58,13 @@ a:hover {
 }
 
 .menu-link {
+  font-size: 12px;
   display: inline-block;
   text-decoration: none;
   border: 1px solid var(--li-border-color);
-  padding: 0.25em 0.5em;
+  padding: 0.25em 0.25em;
   border-radius: 5px;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.1em;
 }
 
 .wrapper {
