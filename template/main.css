@@ -1,18 +1,24 @@
 @media (prefers-color-scheme: light) {
   :root {
+    --text-color: #121212;
+    --li-border-color: #e1e4e8;
+    --link-color: #121212;
+    --link-hover-color: #0366d6;
+    --other-color: #6bb5ff;
     --main-color: hotpink;
-    --link-color: #3e0238;
     --bg-color: #fefefe;
-    --other-color: #2c3e50;
   }
 }
 
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --main-color: hotpink;
-    --link-color: #ffd5fb;
-    --bg-color: #121212;
+    --text-color: #adbac7;
+    --li-border-color: #373e47;
+    --main-color: #6b4759;
+    --link-color: #adbac7;
+    --link-hover-color: #539bf5;
+    --bg-color: #22272e;
     --other-color: #6bb5ff;
   }
 }
@@ -23,11 +29,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: var(--other-color);
+  color: var(--text-color);
 }
 
 a {
   color: var(--link-color)
+}
+
+a:hover {
+  color: var(--link-hover-color);
 }
 
 .header {
@@ -44,11 +54,16 @@ a {
 }
 
 .menu-right {
-  padding-right: 5vw;
+  padding-right: 3vw;
 }
 
 .menu-link {
   display: inline-block;
+  text-decoration: none;
+  border: 1px solid var(--li-border-color);
+  padding: 0.25em 0.5em;
+  border-radius: 5px;
+  letter-spacing: 0.15em;
 }
 
 .wrapper {
@@ -72,7 +87,7 @@ ul {
 
 ul li {
   max-width: 80vw;
-  border: var(--main-color) 1px solid;
+  border: var(--li-border-color) 1px solid;
   padding: 0.25em;
   list-style-type: '📖';
   list-style-position: inside;
@@ -90,18 +105,20 @@ ul li a {
   vertical-align: top;
   text-decoration: none;
   color: var(--link-color);
+  font-size: 14px;
 }
 
 ul li a:hover {
  text-decoration: underline;
 }
 
-ul li:hover {
+/* ul li:hover {
   box-shadow: var(--main-color) 5px 5px;
-}
+} */
 
 mark {
   background-color: var(--main-color);
+  color: var(--text-color);
 }
 
 .footer {
@@ -109,5 +126,5 @@ mark {
 }
 
 .split-line {
-  border: 1px dashed var(--main-color);
+  border: 1px dashed var(--li-border-color);
 }
