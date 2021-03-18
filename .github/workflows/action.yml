@@ -21,11 +21,16 @@ jobs:
         with:
           node-version: '12'
       - name: Install dependencies
-        run: npm install
+        run: |
+          npm install ejs -g
+          npm install
       - name: Update issue data
         run: node index.js
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Generate HTML file
+        run: |
+          ejs template/index.ejs -f template/data.json -o template/output.html
       - name: Copy to dist folder
         run: |
           rm -rf dist
