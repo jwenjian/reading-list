@@ -10,6 +10,17 @@
   }
 }
 
+@media screen and (min-width: 768px) {
+  :root {
+    --li-width: 50vw
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --li-width: 80vw
+  }
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -54,7 +65,7 @@ a:hover {
 }
 
 .menu-right {
-  padding-right: 3vw;
+  padding-right: 5vw;
 }
 
 .menu-link {
@@ -79,7 +90,7 @@ a:hover {
 
 .data-list {
   text-align: left;
-  width: 80vw;
+  width: var(--li-width);
 }
 
 ul {
