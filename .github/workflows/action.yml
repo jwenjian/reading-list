@@ -30,7 +30,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Generate HTML file
         run: |
-          ejs template/index.ejs -f template/data.json -o template/output.html
+          ejs template/index.ejs -f template/data.json -o template/index.html
       - name: Copy to dist folder
         run: |
           rm -rf dist
