@@ -23,10 +23,7 @@
 
 ## 部署地址
 
-- https://reading-list.pages.dev
-- https://todayiread.vercel.app
-- https://todayiread.netlify.app
-- https://jwenjian.github.io/reading-list
+- https://tir.cool
 
 ## 内容来源
 
