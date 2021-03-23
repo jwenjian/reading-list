@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Today I Read, 社区驱动的高质量聚合阅读列表，提供高质量，及时，新潮，有趣的科技新闻， 编程技术，开源项目等， 打破 AI 推荐算法的信息茧房！">
+  <meta name="keywords" content="TIR,阅读列表,科技新闻,中文HackerNews,打破信息茧房,开源项目">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tir.cool/">
+  <meta property="og:title" content="TIR: Today I Read ｜ 社区驱动的高质量聚合阅读列表">
+  <meta property="og:description"
+    content="Today I Read, 社区驱动的高质量聚合阅读列表，提供高质量，及时，新潮，有趣的科技新闻， 编程技术，开源项目等， 打破 AI 推荐算法的信息茧房！">
+  <meta property="og:image" content="https://tir.cool/share-img.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://tir.cool/">
+  <meta property="twitter:title" content="TIR: Today I Read ｜ 社区驱动的高质量聚合阅读列表">
+  <meta property="twitter:description"
+    content="Today I Read, 社区驱动的高质量聚合阅读列表，提供高质量，及时，新潮，有趣的科技新闻， 编程技术，开源项目等， 打破 AI 推荐算法的信息茧房！">
+  <meta property="twitter:image" content="https://tir.cool/share-img.png">
+
+  <!-- favicon -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+
+  <!-- title -->
+  <title>关于 ｜ TIR: Today I Read，社区驱动的高质量聚合阅读列表</title>
+
+  <!-- style -->
+  <link rel="stylesheet" href="main.css">
+
+  <style>
+    p {
+      text-align: left;
+    }
+
+    li {
+      text-align: left;
+    }
+  </style>
+  <!-- Counter.dev -->
+  <script>if (!sessionStorage.getItem("_swa") && document.referrer.indexOf(location.protocol + "//" + location.host) !== 0) { fetch("https://counter.dev/track?" + new URLSearchParams({ referrer: document.referrer, screen: screen.width + "x" + screen.height, user: "Wenjian.jiang@foxmail.com", utcoffset: "8" })) }; sessionStorage.setItem("_swa", "1");</script>
+</head>
+
+<body>
+  <img src="tir_logo.png" alt="TIR Logo" srcset="" width="100vw">
+  <h1>欢迎来到 TIR</h1>
+
+  <h3>这是什么？</h3>
+  <p>TIR，代表 Today I Read，是一个社区驱动的高质量阅读列表。</p>
+  <p>具体来说是一个由人工筛选，聚合多新闻来源，专注提供及时的高质量的科技，开源，编程的 “中文” Hacker News。</p>
+  <p>这里的中文之所以加引号，是因为目前中文新闻来源比较少，多数翻译自国外英文消息来源。</p>
+
+  <h3>和其他的新闻聚合有什么区别？</h3>
+
+  <p>最大的区别就是，社区驱动。</p>
+
+  <p>现在我们接收新闻的种类大概分为几大类：</p>
+
+  <ol>
+    <li>微博，今日头条，新浪新闻等新闻 App</li>
+    <li>小众软件，少数派等论坛类网站</li>
+    <li>自选 RSS 订阅</li>
+    <li>RSS 聚合阅读 App</li>
+    <li>8点一氪，科技爱好者周刊等日刊，周刊类读物</li>
+  </ol>
+
+  <p>第一类，基本都是基于智能推荐算法实现的新闻推送，【信息茧房】且内容多而杂</p>
+  <p>第二类内容一般较为精致，但更偏向于软件类</p>
+  <p>第三类，第四类的一个问题就是，一个人订阅的 RSS 有限，且每个 RSS 输出的内容质量参差不齐</p>
+  <p>第五类内容质量高，但由于是日刊或者周刊发布，及时性不高</p>
+
+  <p> <b>TIR 的解决思路是：</b> </p>
+
+  <p>1. 社区驱动</p>
+  <p>类似于 Hacker News 的机制，由每个对科技，开源，编程有独特敏感度的 News Hunter 贡献阅读列表。</p>
+  <p>打个比方，如果一个人的消息来源有 5 个，每个消息来源每天产生2条高质量的新闻，那么你通过 TIR 每天可以看到 10 条新闻；如果有两个人参与 TIR 的贡献，假设这两个人的消息来源重合度有 50%，那么你可以从 TIR 看到
+    15 条新闻。</p>
+
+  <p>2. 打破信息茧房，拒绝千人千面</p>
+  <p>所有人看到的是同一个列表，也许你只对编程感兴趣，但是你也可以从这里获取到最新的科技新闻。</p>
+
+  <p>3. 及时更新</p>
+
+  <p>只要有新的 issue 提交，就会触发页面更新</p>
+  <p>4. 参与感</p>
+
+  <p>每个人都可以参与进来，分享自己认为高质量的阅读列表。</p>
+  <p>赠人玫瑰，手有余香。</p>
+
+  <h3>什么是 News Hunter，怎么才算是 News Hunter？</h3>
+
+  <p>News Hunter 需要对科技，开源，编程感兴趣，需要有相关新闻的消息来源，比如 RSS，博客，网站等，你才可以从中筛选出你认为高质量的消息来源，最终提交到 TIR。</p>
+
+  <p>任何人都可以是 News Hunter</p>
+
+
+  <h3>如何提交到 TIR</h3>
+
+  <p>请以 <a href="https://github.com/jwenjian/reading-list/issues/new" target="_blank"
+      rel="noopener noreferrer">Issue</a> 的方式提交你认为高质量的新闻，基本要求：</p>
+
+  <ol>
+    <li>标题是中文，如果是其他语言的新闻来源，请翻译成中文。</li>
+    <li>拒绝标题党，标题应该尽可能的概括文章的内容</li>
+    <li>在 issue 的 body 体中 必须只能 包括原文链接</li>
+    <li>如果有自己对于这个新闻的评论，可以以新的 comment 的形式添加到这个 issue 中</li>
+  </ol>
+
+  <h5>前 5 名贡献者可在 README 及本页面获得专属展示位 🔥</h5>
+</body>
+
+</html>
