@@ -17,9 +17,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  :root {
-    --li-width: 100vw
-  }
+  :root {}
 }
 
 @media (prefers-color-scheme: dark) {
@@ -115,7 +113,7 @@ ul li {
 .timeago {
   display: inline-block;
   text-align: right;
-  width: 7em;
+  width: 8em;
   font-size: xx-small;
   padding: 0.5em;
 }
