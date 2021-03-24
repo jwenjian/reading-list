@@ -59,7 +59,6 @@
     <div class="data-list">
       <ul class="list">
         <% today.forEach(function(item_in_today) { %>
-         <!-- <li><a href="<%= item_in_today.body %>" target="_blank"><%= item_in_today.title %></a></li>  -->
          <li>
           <div class="item">
             <a class="title" href="<%= item_in_today.body %>" target="_blank"><%= item_in_today.title %></a>
@@ -76,7 +75,6 @@
       <h5>近期</h5>
       <ul class="recent-list">
         <% recent.forEach(function(item_in_recent) { %>
-          <!-- <li><a href="<%= item_in_recent.html_url %>" target="_blank"><%= item_in_recent.title %></a></li>  -->
           <li>
             <div class="item">
               <a class="title" href="<%= item_in_recent.body %>" target="_blank"><%= item_in_recent.title %></a>
