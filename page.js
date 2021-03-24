@@ -1,4 +1,14 @@
 
-// 设置当前时间
-const currentDate = new Date()
-document.getElementById('current-date').innerText = `${currentDate.getFullYear()}-${currentDate.getMonth() + 1}-${currentDate.getDate()}`
+function parseTime() {
+  const nodes = document.querySelectorAll('.timeago');
+
+  // use render method to render nodes in real time
+  timeago.render(nodes, 'zh_CN');
+  
+  // cancel all real-time render task
+  timeago.cancel();
+}
+
+setTimeout(() => {
+  parseTime()
+}, 0);

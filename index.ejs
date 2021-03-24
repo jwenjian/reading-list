@@ -35,6 +35,8 @@
   <!-- style -->
   <link rel="stylesheet" href="main.css">
 
+  <script src="https://cdn.jsdelivr.net/npm/timeago.js@4.0.2/dist/timeago.min.js"></script>
+  
   <!-- Counter.dev -->
   <script>if (!sessionStorage.getItem("_swa") && document.referrer.indexOf(location.protocol + "//" + location.host) !== 0) { fetch("https://counter.dev/track?" + new URLSearchParams({ referrer: document.referrer, screen: screen.width + "x" + screen.height, user: "Wenjian.jiang@foxmail.com", utcoffset: "8" })) }; sessionStorage.setItem("_swa", "1");</script>
 </head>
@@ -53,20 +55,40 @@
   </div>
   <img src="tir_logo.png" alt="TIR Logo" style="height: 10vh;">
   <h3>社区驱动的高质量聚合阅读列表</h3>
-  <h5 id="current-date"></h5>
   <div class="wrapper">
     <div class="data-list">
       <ul class="list">
         <% today.forEach(function(item_in_today) { %>
-         <li><a href="<%= item_in_today.body %>" target="_blank"><%= item_in_today.title %></a></li> 
+         <!-- <li><a href="<%= item_in_today.body %>" target="_blank"><%= item_in_today.title %></a></li>  -->
+         <li>
+          <div class="item">
+            <a class="title" href="<%= item_in_today.body %>" target="_blank"><%= item_in_today.title %></a>
+            <span class="timeago" datetime="<%= item_in_today.created_at %>"></span>
+          </div>
+          <div class="item-btn">
+            <a href="<%= item_in_today.body %>" target="_blank">🔗原文</a>
+            <a href="<%= item_in_today.html_url %>" target="_blank">💬讨论</a>
+          </div>
+         </li>
         <% }) %>
       </ul>
       <hr class="split-line">
       <h5>近期</h5>
       <ul class="recent-list">
         <% recent.forEach(function(item_in_recent) { %>
-          <li><a href="<%= item_in_recent.html_url %>" target="_blank"><%= item_in_recent.title %></a></li> 
-         <% }) %>
+          <!-- <li><a href="<%= item_in_recent.html_url %>" target="_blank"><%= item_in_recent.title %></a></li>  -->
+          <li>
+            <div class="item">
+              <a class="title" href="<%= item_in_recent.body %>" target="_blank"><%= item_in_recent.title %></a>
+              <span class="timeago" datetime="<%= item_in_recent.created_at %>"></span>
+            </div>
+            <div class="item-btn">
+              <a href="<%= item_in_recent.body %>" target="_blank">🔗原文</a>
+              <a href="<%= item_in_recent.html_url %>" target="_blank">💬讨论</a>
+            </div>
+            </li>
+
+          <% }) %>
       </ul>
     </div>
   </div>
