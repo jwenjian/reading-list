@@ -33,8 +33,8 @@ async function main() {
 
   let rest = resp.data.slice(resp.data.indexOf(data.today[data.today.length - 1]) + 1)
 
-  if (rest.length > 10) {
-    data.recent = rest.slice(0, 10)
+  if (rest.length > 20) {
+    data.recent = rest.slice(0, 20)
   } else {
     data.recent = rest
   }
