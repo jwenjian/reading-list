@@ -12,13 +12,13 @@
 
 @media screen and (min-width: 768px) {
   :root {
-    --li-width: 50vw
+    --li-width: 70vw
   }
 }
 
 @media screen and (max-width: 768px) {
   :root {
-    --li-width: 80vw
+    --li-width: 100vw
   }
 }
 
@@ -115,8 +115,8 @@ ul li {
 .timeago {
   display: inline-block;
   text-align: right;
-  width: 5em;
-  font-size: x-small;
+  width: 7em;
+  font-size: xx-small;
   padding: 0.5em;
 }
 
@@ -133,7 +133,7 @@ ul li {
 }
 
 .item-btn {
-  font-size: x-small;
+  font-size: xx-small;
   padding: 0.5em;
 }
 
