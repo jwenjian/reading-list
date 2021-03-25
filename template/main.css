@@ -17,7 +17,6 @@
 }
 
 @media screen and (max-width: 768px) {
-  :root {}
 }
 
 @media (prefers-color-scheme: dark) {
@@ -131,14 +130,18 @@ ul li {
 }
 
 .item-btn {
-  font-size: xx-small;
+  display: flex;
+  font-size: small;
   padding: 0.5em;
+  justify-content: space-between;
 }
+
 
 .item-btn a {
   text-decoration: none;
   letter-spacing: 0.1em;
 }
+
 ul li a:hover {
  text-decoration: underline;
 }

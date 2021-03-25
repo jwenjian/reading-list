@@ -62,11 +62,15 @@
          <li>
           <div class="item">
             <a class="title" href="<%= item_in_today.body %>" target="_blank"><%= item_in_today.title %></a>
-            <span class="timeago" datetime="<%= item_in_today.created_at %>"></span>
           </div>
           <div class="item-btn">
-            <a href="<%= item_in_today.body %>" target="_blank">🔗原文</a>
-            <a href="<%= item_in_today.html_url %>" target="_blank">💬讨论</a>
+            <div class="btns">
+              <a href="<%= item_in_today.body %>" target="_blank">🔗原文</a>
+              <a href="<%= item_in_today.html_url %>" target="_blank">💬讨论</a>
+            </div>
+            <div>
+              <span class="timeago" datetime="<%= item_in_today.created_at %>"></span>
+            </div>
           </div>
          </li>
         <% }) %>
@@ -78,11 +82,15 @@
           <li>
             <div class="item">
               <a class="title" href="<%= item_in_recent.body %>" target="_blank"><%= item_in_recent.title %></a>
-              <span class="timeago" datetime="<%= item_in_recent.created_at %>"></span>
             </div>
             <div class="item-btn">
-              <a href="<%= item_in_recent.body %>" target="_blank">🔗原文</a>
-              <a href="<%= item_in_recent.html_url %>" target="_blank">💬讨论</a>
+              <div class="btns">
+                <a href="<%= item_in_recent.body %>" target="_blank">🔗原文</a>
+                <a href="<%= item_in_recent.html_url %>" target="_blank">💬讨论</a>
+              </div>
+              <div>
+                <span class="timeago" datetime="<%= item_in_recent.created_at %>"></span>
+              </div>
             </div>
             </li>
 
