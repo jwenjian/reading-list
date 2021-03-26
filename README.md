@@ -1,14 +1,12 @@
-<p align="center"><img src="https://todayiread.vercel.app/tir_logo.png" style="width: 50%; height: 50%" /></p>
+# TIR
 
-# 社区驱动的高质量聚合阅读列表
+> TIR, 打造一个社区驱动的高质量阅读列表.
 
 这里没有算法， 没有 AI，没有千人千面。
 
 只有及时，有趣，高质量的阅读列表。
 
 ![issues](https://badgen.net/github/issues/jwenjian/reading-list) ![watchers](https://badgen.net/github/watchers/jwenjian/reading-list) ![visitors](https://visitor-badge.glitch.me/badge?page_id=jwenjian.readling-list)
-
-欢迎来到 TIR
 
 ## 这是什么？
 
