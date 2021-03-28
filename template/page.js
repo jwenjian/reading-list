@@ -13,11 +13,11 @@ setTimeout(() => {
   parseTime()
 }, 0);
 
-function handleShare(e) {
+function handleShare(txt) {
   if (navigator.share) {
     navigator.share({
-      title: e.innerText || 'TIR.cool 社区驱动的高质量阅读列表',
-      text: e.innerText  || 'TIR.cool 社区驱动的高质量阅读列表',
+      title: txt || 'TIR.cool 社区驱动的高质量阅读列表',
+      text: txt  || 'TIR.cool 社区驱动的高质量阅读列表',
       url: 'https://tir.cool',
     })
       .then(() => console.log('Successful share'))
