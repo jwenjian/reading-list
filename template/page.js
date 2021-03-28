@@ -14,7 +14,6 @@ setTimeout(() => {
 }, 0);
 
 function handleShare(e) {
-  debugger
   if (navigator.share) {
     navigator.share({
       title: 'TIR.cool, 社区驱动的高质量阅读列表',
