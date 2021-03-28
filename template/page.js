@@ -16,8 +16,8 @@ setTimeout(() => {
 function handleShare(e) {
   if (navigator.share) {
     navigator.share({
-      title: 'TIR.cool, 社区驱动的高质量阅读列表',
-      text: e.innerText,
+      title: e.innerText || 'TIR.cool 社区驱动的高质量阅读列表',
+      text: e.innerText  || 'TIR.cool 社区驱动的高质量阅读列表',
       url: 'https://tir.cool',
     })
       .then(() => console.log('Successful share'))
