@@ -28,15 +28,15 @@
   <!-- favicon -->
   <link rel="icon"
     href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
-  
+
   <!-- title -->
   <title>TIR: Today I Read ｜ 社区驱动的高质量聚合阅读列表</title>
-  
+
   <!-- style -->
   <link rel="stylesheet" href="main.css">
 
   <script defer src="https://cdn.jsdelivr.net/npm/timeago.js@4.0.2/dist/timeago.min.js"></script>
-  
+
   <!-- Counter.dev -->
   <script>if (!sessionStorage.getItem("_swa") && document.referrer.indexOf(location.protocol + "//" + location.host) !== 0) { fetch("https://counter.dev/track?" + new URLSearchParams({ referrer: document.referrer, screen: screen.width + "x" + screen.height, user: "Wenjian.jiang@foxmail.com", utcoffset: "8" })) }; sessionStorage.setItem("_swa", "1");</script>
 </head>
@@ -49,7 +49,8 @@
       </span>
     </div>
     <div class="menu-right">
-      <a class="menu-link" id="community-link" href="https://github.com/jwenjian/reading-list/discussions" target="_blank">🧑‍🤝‍🧑社区</a>
+      <a class="menu-link" id="community-link" href="https://github.com/jwenjian/reading-list/discussions"
+        target="_blank">🧑‍🤝‍🧑社区</a>
       <a class="menu-link" id="about-link" href="about.html" target="_blank">💡关于</a>
     </div>
   </div>
@@ -59,21 +60,23 @@
     <div class="data-list">
       <ul class="list">
         <% today.forEach(function(item_in_today) { %>
-         <li>
-          <div class="item">
-            <a class="title" href="<%= item_in_today.body %>" target="_blank"><%= item_in_today.title %></a>
-          </div>
-          <div class="item-btn">
-            <div class="btns">
-              <a href="<%= item_in_today.body %>" target="_blank">🔗原文</a>
-              <a href="<%= item_in_today.html_url %>" target="_blank">💬讨论</a>
+          <li>
+            <div class="item">
+              <a class="title">
+                <%= item_in_today.title %>
+              </a>
             </div>
-            <div>
-              <span class="timeago" datetime="<%= item_in_today.created_at %>"></span>
+            <div class="item-btn">
+              <div class="btns">
+                <a href="<%= item_in_today.body %>" target="_blank">🔗原文</a>
+                <a href="<%= item_in_today.html_url %>" target="_blank">💬讨论</a>
+              </div>
+              <div>
+                <span class="timeago" datetime="<%= item_in_today.created_at %>"></span>
+              </div>
             </div>
-          </div>
-         </li>
-        <% }) %>
+          </li>
+          <% }) %>
       </ul>
       <hr class="split-line">
       <h5>近期</h5>
@@ -81,7 +84,9 @@
         <% recent.forEach(function(item_in_recent) { %>
           <li>
             <div class="item">
-              <a class="title" href="<%= item_in_recent.body %>" target="_blank"><%= item_in_recent.title %></a>
+              <a class="title">
+                <%= item_in_recent.title %>
+              </a>
             </div>
             <div class="item-btn">
               <div class="btns">
@@ -92,7 +97,7 @@
                 <span class="timeago" datetime="<%= item_in_recent.created_at %>"></span>
               </div>
             </div>
-            </li>
+          </li>
 
           <% }) %>
       </ul>
@@ -100,9 +105,20 @@
   </div>
   <div class="footer">
     <a href="https://github.com/jwenjian/reading-list/issues" target="_blank">归档</a>
-    <p>上次更新于：<span id="update_at"><%= update_at %></span></p>
+    <p>上次更新于：<span id="update_at">
+        <%= update_at %>
+      </span></p>
     <p>Made with 💖 by <a href="https://github.com/jwenjian" target="_blank">@jwenjian</a> </p>
   </div>
 </body>
 <script src="page.js"></script>
+<script>
+  document.onload = function () {
+    // register click event to hanlde share
+    document.querySelectorAll('a.title').forEach(el => {
+      el.onclick = handleShare
+    })
+  }
+</script>
+
 </html>
