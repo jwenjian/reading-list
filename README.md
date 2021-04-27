@@ -6,7 +6,7 @@
 
 只有及时，有趣，高质量的阅读列表。
 
-![issues](https://badgen.net/github/issues/jwenjian/reading-list) ![watchers](https://badgen.net/github/watchers/jwenjian/reading-list) ![visitors](https://visitor-badge.glitch.me/badge?page_id=jwenjian.readling-list)
+![issues](https://badgen.net/github/issues/jwenjian/reading-list) ![visitors](https://visitor-badge.glitch.me/badge?page_id=jwenjian.readling-list)
 
 ## 这是什么？
 
