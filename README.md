@@ -66,15 +66,11 @@ TIR 的解决思路是：
 
 2. 拒绝标题党，标题应该尽可能的概括文章的内容
 
-3. 在 issue 的 body 体中 **必须只能** 包括原文链接
-
-4. 如果有自己对于这个新闻的评论，可以以新的 comment 的形式添加到这个 issue 中
-
+3. 在 issue 的 body 体中附上自己对这个新闻的评论(可选)并附上原文链接(**必须**)
 
 # 前 5 位共建者
 
 这里列出 TIR.cool 社区的共建者，正是由于他们的贡献才使得 TIR.cool 可以保持活跃。
 
 - <a href="https://github.com/mrchenmo"><img src="https://avatars.githubusercontent.com/u/18020929?v=4" width="80px"/></a> [@mrchenmo](https://github.com/mrchenmo) 
-
 
