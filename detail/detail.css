@@ -1,0 +1,138 @@
+@media (prefers-color-scheme: light) {
+  :root {
+    --text-color: #121212;
+    --li-border-color: #e1e4e8;
+    --link-color: #121212;
+    --link-hover-color: #0366d6;
+    --other-color: #6bb5ff;
+    --main-color: hotpink;
+    --bg-color: #fefefe;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --li-width: 50vw
+  }
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #adbac7;
+    --li-border-color: #373e47;
+    --main-color: #6b4759;
+    --link-color: #adbac7;
+    --link-hover-color: #539bf5;
+    --bg-color: #22272e;
+    --other-color: #6bb5ff;
+  }
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: 'Roboto Mono', monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: var(--text-color);
+}
+
+a {
+  color: var(--link-color)
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+.header {
+  height: 5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-left {
+  text-align: left;
+  padding-left: 5vw;
+  font-size: x-large;
+}
+
+.menu-right {
+  padding-right: 5vw;
+}
+
+.menu-link {
+  font-size: 12px;
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid var(--li-border-color);
+  padding: 0.25em 0.25em;
+  border-radius: 5px;
+  letter-spacing: 0.1em;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.issue-detail {
+  width: 50vw;
+}
+.title {
+  font-weight: 800;
+  background-color: var(--main-color);
+  color: white;
+  text-align: left;
+  min-height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1em;
+}
+
+.body {
+  margin-top: 50px;
+  font-weight: 500;
+  text-align: left;
+  min-height: 10vh;
+  margin: auto auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1em;
+  border-left: 2px solid #eee;
+}
+
+.body p {
+  overflow-wrap: anywhere;
+}
+
+#comment {
+  text-align: left;
+}
+
+.comment-tips {
+  text-align: left;
+  color: var(--text-color);
+  font-size: x-small;
+}
+
+.publisher {
+  text-align: left;
+  margin: 1em 0;
+}
+
+.publisher a {
+  color: var(--link-color);
+}
+
+mark {
+  background-color: var(--main-color);
+  color: var(--text-color);
+}
