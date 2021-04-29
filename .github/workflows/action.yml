@@ -35,7 +35,7 @@ jobs:
         run: |
           rm -rf dist
           mkdir dist
-          cp template/* dist/
+          cp -r template/* dist/
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
