@@ -120,6 +120,8 @@ a:hover {
 
 .body p {
   overflow-wrap: anywhere;
+  word-break: break-all;
+  word-wrap: break-word;
 }
 
 #comment {
