@@ -15,10 +15,11 @@ setTimeout(() => {
 
 function handleShare(evt) {
   if (navigator.share) {
+    const title = document.querySelector('.title>p').innerText
     navigator.share({
-      title: evt.target.innerText ? evt.target.innerText : 'TIR.cool 社区驱动的高质量阅读列表',
-      text: evt.target.innerText  ? evt.target.innerText : 'TIR.cool 社区驱动的高质量阅读列表',
-      url: 'https://tir.cool',
+      title: 'TIR.cool: ' + title,
+      text: 'TIR.cool: ' + title,
+      url: location.href,
     })
       .then(() => console.log('Successful share'))
       .catch((error) => console.log('Error sharing', error));
