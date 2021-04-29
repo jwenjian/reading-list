@@ -6,17 +6,31 @@ const ejs = require('ejs')
 
 const octokit = new Octokit(
   {
-    auth: process.env.GITHUB_TOKEN
+    auth: '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'
   }
 );
 
-async function generateDetailPage(issues) {
+async function generateDetailPage() {
+  // detail page generation of issues in today
+  let issues = JSON.parse(fs.readFileSync('template/data.json')).today
   issues.forEach(i => {
     ejs.renderFile(
       `template/detail.ejs`,
       i,
       (err, str) => {
-        fs.writeFileSync(`template/detail/${i.id}.html`, str)
+        fs.writeFileSync(`template/detail/${i.number}.html`, str)
+      }
+    )
+  });
+
+  // detail page generation of issues in recent
+  issues = JSON.parse(fs.readFileSync('template/data.json')).recent
+  issues.forEach(i => {
+    ejs.renderFile(
+      `template/detail.ejs`,
+      i,
+      (err, str) => {
+        fs.writeFileSync(`template/detail/${i.number}.html`, str)
       }
     )
   });
@@ -40,8 +54,6 @@ async function main() {
     return
   }
 
-  await generateDetailPage(resp.data)
-
   data.today = resp.data.filter(item => {
     return Date.parse(item.created_at) > startOfTheDay.getTime()
   })
@@ -56,6 +68,9 @@ async function main() {
   fs.writeFileSync('template/data.json', JSON.stringify(data))
   console.log('Issues write to data.json')
 
+  await generateDetailPage()
+
+  console.log("Detail page generated!")
 }
 
 main()
