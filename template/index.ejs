@@ -70,7 +70,7 @@
             </div>
             <div class="item-btn">
               <div class="btns">
-                <a href="<%= item_in_recent.user.html_url %>" target="_blank">@<%= user.login %></a>
+                <a href="<%= item_in_recent.user.html_url %>" target="_blank">@<%= item_in_today.user.login %></a>
               </div>
               <div>
                 <span class="timeago" datetime="<%= item_in_today.created_at %>"></span>
@@ -91,7 +91,7 @@
             </div>
             <div class="item-btn">
               <div class="btns">
-                <a href="<%= item_in_recent.user.html_url %>" target="_blank">@<%= user.login %></a>
+                <a href="<%= item_in_recent.user.html_url %>" target="_blank">@<%= item_in_recent.user.login %></a>
               </div>
               <div>
                 <span class="timeago" datetime="<%= item_in_recent.created_at %>"></span>
