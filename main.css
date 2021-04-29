@@ -54,6 +54,7 @@ a:hover {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #eee;
+  padding-bottom: 0.25em;
 }
 
 .menu-left {
@@ -139,8 +140,7 @@ ul li {
 
 
 .item-btn a {
-  text-decoration: none;
-  letter-spacing: 0.1em;
+  font-size: xx-small;
 }
 
 ul li a:hover {
