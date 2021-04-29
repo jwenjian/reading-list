@@ -18,6 +18,6 @@
   "homepage": "https://github.com/jwenjian/reading-list#readme",
   "dependencies": {
     "@octokit/rest": "^18.3.4",
-    "node-fetch": "^2.6.1"
+    "ejs": "^3.1.6"
   }
 }
