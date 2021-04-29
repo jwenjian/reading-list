@@ -18,7 +18,7 @@
 
 @media screen and (max-width: 768px) {
   :root {
-    --detail-width: 99vw
+    --detail-width: 90vw
   }
 }
 
@@ -56,6 +56,11 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+.header a {
+  text-decoration: none;
 }
 
 .menu-left {
@@ -139,3 +144,4 @@ mark {
   background-color: var(--main-color);
   color: var(--text-color);
 }
+
