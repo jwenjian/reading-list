@@ -12,11 +12,14 @@
 
 @media screen and (min-width: 768px) {
   :root {
-    --li-width: 50vw
+    --detail-width: 50vw
   }
 }
 
 @media screen and (max-width: 768px) {
+  :root {
+    --detail-width: 99vw
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -82,7 +85,7 @@ a:hover {
 }
 
 .issue-detail {
-  width: 50vw;
+  width: var(--detail-width);
 }
 .title {
   font-weight: 800;

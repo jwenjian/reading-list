@@ -55,7 +55,7 @@
       </a>
     </div>
     <div class="menu-right">
-      <a class="menu-link" id="share-link" href="#" onclick="handleShare">💡分享</a>
+      <a class="menu-link" id="share-link" href="#">💡分享</a>
     </div>
   </div>
   <div class="wrapper">
@@ -85,6 +85,7 @@
 </body>
 <script src="detail.js"></script>
 <script>
+  // init comments
   Octomments({
     github: {
       owner: 'jwenjian',
@@ -93,6 +94,8 @@
     issueNumber: 307,
     renderer: [OctommentsRenderer, '#comment']
   }).init();
+  // register share event
+  document.querySelector('#share-link').onclick = handleShare
 </script>
 
 </html>

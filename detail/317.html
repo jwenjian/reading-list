@@ -46,7 +46,7 @@
       </a>
     </div>
     <div class="menu-right">
-      <a class="menu-link" id="share-link" href="#" onclick="handleShare">💡分享</a>
+      <a class="menu-link" id="share-link" href="#">💡分享</a>
     </div>
   </div>
   <div class="wrapper">
@@ -74,6 +74,7 @@ https://www.wired.com/story/airdrop-leaking-email-addresses-and-phone-numbers/
 </body>
 <script src="detail.js"></script>
 <script>
+  // init comments
   Octomments({
     github: {
       owner: 'jwenjian',
@@ -82,6 +83,8 @@ https://www.wired.com/story/airdrop-leaking-email-addresses-and-phone-numbers/
     issueNumber: 317,
     renderer: [OctommentsRenderer, '#comment']
   }).init();
+  // register share event
+  document.querySelector('#share-link').onclick = handleShare
 </script>
 
 </html>
