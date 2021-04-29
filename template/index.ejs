@@ -57,6 +57,7 @@
   </div>
   <img src="tir_logo.png" alt="TIR Logo" style="height: 10vh;">
   <h3>社区驱动的高质量聚合阅读列表</h3>
+  <h4>TIR.cool，专注提供高质量，及时，新潮，有趣的科技新闻， 编程技术，开源项目</h4>
   <div class="wrapper">
     <div class="data-list">
       <ul class="list">
@@ -69,7 +70,7 @@
             </div>
             <div class="item-btn">
               <div class="btns">
-                <a href="<%= item_in_today.html_url %>" target="_blank">💬讨论</a>
+                <a href="<%= item_in_recent.user.html_url %>" target="_blank">@<%= user.login %></a>
               </div>
               <div>
                 <span class="timeago" datetime="<%= item_in_today.created_at %>"></span>
@@ -90,7 +91,7 @@
             </div>
             <div class="item-btn">
               <div class="btns">
-                <a href="<%= item_in_recent.html_url %>" target="_blank">💬讨论</a>
+                <a href="<%= item_in_recent.user.html_url %>" target="_blank">@<%= user.login %></a>
               </div>
               <div>
                 <span class="timeago" datetime="<%= item_in_recent.created_at %>"></span>
