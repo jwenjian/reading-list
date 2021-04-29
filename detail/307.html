@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cmn">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="keywords" content="科技新闻,中文HackerNews,信息茧房,开源项目">
-  
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://tir.cool/">
   <meta property="og:title" content="TIR: Today I Read ｜ 社区驱动的高质量聚合阅读列表">
-  <meta property="og:description"
-    content="格雷格·克罗亚-哈特曼拒绝明尼苏达大学研究人员道歉，他回复到“如你所知，Linux基金会和Linux基金会的技术咨询委员会在周五向贵国大学提交了一封信，概述了为了让您的团队和您的大学能够重新获得Linux核心社区的信任而需要采取的具体
+  <meta property="og:description" content="格雷格·克罗亚-哈特曼拒绝明尼苏达大学研究人员道歉，他回复到“如你所知，Linux基金会和Linux基金会的技术咨询委员会在周五向贵国大学提交了一封信，概述了为了让您的团队和您的大学能够重新获得Linux核心社区的信任而需要采取的具体
 行动。
 在采取这些行动之前，我们没有任何进一步讨论
 这个问题。”">
@@ -21,8 +21,7 @@
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://tir.cool/">
   <meta property="twitter:title" content="TIR: Today I Read ｜ 社区驱动的高质量聚合阅读列表">
-  <meta property="twitter:description"
-    content="格雷格·克罗亚-哈特曼拒绝明尼苏达大学研究人员道歉，他回复到“如你所知，Linux基金会和Linux基金会的技术咨询委员会在周五向贵国大学提交了一封信，概述了为了让您的团队和您的大学能够重新获得Linux核心社区的信任而需要采取的具体
+  <meta property="twitter:description" content="格雷格·克罗亚-哈特曼拒绝明尼苏达大学研究人员道歉，他回复到“如你所知，Linux基金会和Linux基金会的技术咨询委员会在周五向贵国大学提交了一封信，概述了为了让您的团队和您的大学能够重新获得Linux核心社区的信任而需要采取的具体
 行动。
 在采取这些行动之前，我们没有任何进一步讨论
 这个问题。”">
@@ -32,10 +31,12 @@
   <link rel="icon"
     href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
 
-  <title>格雷格·克罗亚-哈特曼拒绝明尼苏达大学研究人员道歉，他回复到“如你所知，Linux基金会和Linux基金会的技术咨询委员会在周五向贵国大学提交了一封信，概述了为了让您的团队和您的大学能够重新获得Linux核心社区的信任而需要采取的具体
+  <title>
+    格雷格·克罗亚-哈特曼拒绝明尼苏达大学研究人员道歉，他回复到“如你所知，Linux基金会和Linux基金会的技术咨询委员会在周五向贵国大学提交了一封信，概述了为了让您的团队和您的大学能够重新获得Linux核心社区的信任而需要采取的具体
 行动。
 在采取这些行动之前，我们没有任何进一步讨论
-这个问题。” | TIR.cool</title>
+这个问题。” | TIR.cool
+  </title>
 
   <link rel="stylesheet" href="detail.css">
   <link rel="stylesheet" href="https://unpkg.com/octomments/build/ocs-ui.min.css" />
@@ -43,21 +44,25 @@
   <script src="https://cdn.jsdelivr.net/npm/timeago.js@4.0.2/dist/timeago.min.js"></script>
 
 </head>
+
 <body>
   <div class="header">
     <div class="menu-left">
-      <span>
-        <mark>TIR</mark>.cool
-      </span>
+      <a href="https://tir.cool">
+        <span>
+          <mark>TIR</mark>.cool
+        </span>
+      </a>
     </div>
     <div class="menu-right">
-      <a class="menu-link" id="share-link" href="#">💡分享</a>
+      <a class="menu-link" id="share-link" href="#" onclick="handleShare">💡分享</a>
     </div>
   </div>
   <div class="wrapper">
     <div class="issue-detail">
       <div class="publisher">
-        <a href="https://github.com/jwenjian" target="_blank">@jwenjian</a> 发布于  <span class="timeago" datetime="2021-04-25T23:37:45Z"></span> :
+        <a href="https://github.com/jwenjian" target="_blank">@jwenjian</a> 发布于 <span class="timeago"
+          datetime="2021-04-25T23:37:45Z"></span> :
       </div>
       <div class="title">
         <p>
@@ -65,7 +70,7 @@
 行动。
 在采取这些行动之前，我们没有任何进一步讨论
 这个问题。”
-        </p> 
+        </p>
       </div>
       <div class="body">
         <p>
@@ -75,7 +80,7 @@
       <p class="comment-tips">和大家一起讨论一下吧~</p>
       <div id="comment"></div>
     </div>
-    
+
   </div>
 </body>
 <script src="detail.js"></script>
@@ -89,4 +94,5 @@
     renderer: [OctommentsRenderer, '#comment']
   }).init();
 </script>
+
 </html>
