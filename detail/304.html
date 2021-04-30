@@ -33,6 +33,7 @@
   <link rel="stylesheet" href="https://unpkg.com/octomments/build/ocs-ui.min.css" />
   <script src="https://unpkg.com/octomments/build/ocs.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/timeago.js@4.0.2/dist/timeago.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <!-- Counter.dev -->
 <script>if (!sessionStorage.getItem("_swa") && document.referrer.indexOf(location.protocol + "//" + location.host) !== 0) { fetch("https://counter.dev/track?" + new URLSearchParams({ referrer: document.referrer, screen: screen.width + "x" + screen.height, user: "Wenjian.jiang@foxmail.com", utcoffset: "8" })) }; sessionStorage.setItem("_swa", "1");</script>
 </head>
@@ -61,11 +62,7 @@
           一个恶意软件团伙利用漏洞入侵到用户的 NAS 服务器上，使用 7 zip 软件将用户的文件压缩到一个密码保护的压缩包中，并勒索0.01 比特币约合500美元，短短 5天内，已经收到了26000美元的赎金。
         </p>
       </div>
-      <div class="body">
-        <p>
-          calshow:641448000
-https://www.bleepingcomputer.com/news/security/a-ransomware-gang-made-260-000-in-5-days-using-the-7zip-utility/?__cf_chl_jschl_tk__=4411d1a08e4a63bb5e382c17b3c2a38982d7f00d-1619319589-0-AXYdwrtoQfHJ61nX0MNv30HZ9bnGzRxezQ445zllkTqIty8oTk3hu7NJpiYvEcTxe0z7VHFm5l1DMM_WVJCFaZRS3-qlIbN6KQz_40NI1hF0Z_heb7dLWW73Vnc0BYdiubwzRQD1wFv_raCkZvwp7U4X1zmLQMpszM9Aep6Y4Qjn9rs61choCnveheooNHrifetaM7txbwaavmePsHkxmZD1NkcEajIrZ1f0M1QVrqOJE8enS5nTtfJWPL4IHX0rjLopErHejIdgvdHCk9g_s6Cvw3X-tCWtaQi4qtj8lUMwq7e6w22Bw2sL8tylUtQibGmeBVrqZwdLcXD5_6sH3wwd8SMTtvIwlccmQ8D3VvH2aolusrNT1CJUnzSBwAOcmkN6zVDAJxEYxZJ_EK3sz2p33oE0jULkFiw6NizX1glZ600RVrzWoyFS61hVSAbMJ4daWkgQTnky_h0FPiyDNwUzyf6SENtzeCxoW6nDPgqo
-        </p>
+      <div class="body" id="content">
       </div>
       <p class="comment-tips">和大家一起讨论一下吧~</p>
       <div id="comment"></div>
@@ -86,6 +83,10 @@ https://www.bleepingcomputer.com/news/security/a-ransomware-gang-made-260-000-in
   }).init();
   // register share event
   document.querySelector('#share-link').onclick = handleShare
+  // parse markdown body
+  document.getElementById('content').innerHTML =
+      marked(calshow:641448000
+https://www.bleepingcomputer.com/news/security/a-ransomware-gang-made-260-000-in-5-days-using-the-7zip-utility/?__cf_chl_jschl_tk__=4411d1a08e4a63bb5e382c17b3c2a38982d7f00d-1619319589-0-AXYdwrtoQfHJ61nX0MNv30HZ9bnGzRxezQ445zllkTqIty8oTk3hu7NJpiYvEcTxe0z7VHFm5l1DMM_WVJCFaZRS3-qlIbN6KQz_40NI1hF0Z_heb7dLWW73Vnc0BYdiubwzRQD1wFv_raCkZvwp7U4X1zmLQMpszM9Aep6Y4Qjn9rs61choCnveheooNHrifetaM7txbwaavmePsHkxmZD1NkcEajIrZ1f0M1QVrqOJE8enS5nTtfJWPL4IHX0rjLopErHejIdgvdHCk9g_s6Cvw3X-tCWtaQi4qtj8lUMwq7e6w22Bw2sL8tylUtQibGmeBVrqZwdLcXD5_6sH3wwd8SMTtvIwlccmQ8D3VvH2aolusrNT1CJUnzSBwAOcmkN6zVDAJxEYxZJ_EK3sz2p33oE0jULkFiw6NizX1glZ600RVrzWoyFS61hVSAbMJ4daWkgQTnky_h0FPiyDNwUzyf6SENtzeCxoW6nDPgqo);
 </script>
 
 </html>

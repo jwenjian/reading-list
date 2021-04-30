@@ -33,6 +33,7 @@
   <link rel="stylesheet" href="https://unpkg.com/octomments/build/ocs-ui.min.css" />
   <script src="https://unpkg.com/octomments/build/ocs.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/timeago.js@4.0.2/dist/timeago.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <!-- Counter.dev -->
 <script>if (!sessionStorage.getItem("_swa") && document.referrer.indexOf(location.protocol + "//" + location.host) !== 0) { fetch("https://counter.dev/track?" + new URLSearchParams({ referrer: document.referrer, screen: screen.width + "x" + screen.height, user: "Wenjian.jiang@foxmail.com", utcoffset: "8" })) }; sessionStorage.setItem("_swa", "1");</script>
 </head>
@@ -61,11 +62,7 @@
           Airdrop 会泄漏你的邮箱地址和手机号码，苹果从2019年就知道这个漏洞，但至今还没有声明，也没有对这个漏洞进行修复。
         </p>
       </div>
-      <div class="body">
-        <p>
-          https://www.wired.com
-https://www.wired.com/story/airdrop-leaking-email-addresses-and-phone-numbers/
-        </p>
+      <div class="body" id="content">
       </div>
       <p class="comment-tips">和大家一起讨论一下吧~</p>
       <div id="comment"></div>
@@ -86,6 +83,10 @@ https://www.wired.com/story/airdrop-leaking-email-addresses-and-phone-numbers/
   }).init();
   // register share event
   document.querySelector('#share-link').onclick = handleShare
+  // parse markdown body
+  document.getElementById('content').innerHTML =
+      marked(https://www.wired.com
+https://www.wired.com/story/airdrop-leaking-email-addresses-and-phone-numbers/);
 </script>
 
 </html>

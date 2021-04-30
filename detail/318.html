@@ -33,6 +33,7 @@
   <link rel="stylesheet" href="https://unpkg.com/octomments/build/ocs-ui.min.css" />
   <script src="https://unpkg.com/octomments/build/ocs.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/timeago.js@4.0.2/dist/timeago.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <!-- Counter.dev -->
 <script>if (!sessionStorage.getItem("_swa") && document.referrer.indexOf(location.protocol + "//" + location.host) !== 0) { fetch("https://counter.dev/track?" + new URLSearchParams({ referrer: document.referrer, screen: screen.width + "x" + screen.height, user: "Wenjian.jiang@foxmail.com", utcoffset: "8" })) }; sessionStorage.setItem("_swa", "1");</script>
 </head>
@@ -61,11 +62,7 @@
           FCC 允许 SpaceX 降低卫星高度，以提高星际链接(star link)速度以及降低延迟
         </p>
       </div>
-      <div class="body">
-        <p>
-          https://arstechnica.com
-https://arstechnica.com/tech-policy/2021/04/fcc-lets-spacex-cut-satellite-altitude-to-improve-starlink-speed-and-latency/
-        </p>
+      <div class="body" id="content">
       </div>
       <p class="comment-tips">和大家一起讨论一下吧~</p>
       <div id="comment"></div>
@@ -86,6 +83,10 @@ https://arstechnica.com/tech-policy/2021/04/fcc-lets-spacex-cut-satellite-altitu
   }).init();
   // register share event
   document.querySelector('#share-link').onclick = handleShare
+  // parse markdown body
+  document.getElementById('content').innerHTML =
+      marked(https://arstechnica.com
+https://arstechnica.com/tech-policy/2021/04/fcc-lets-spacex-cut-satellite-altitude-to-improve-starlink-speed-and-latency/);
 </script>
 
 </html>

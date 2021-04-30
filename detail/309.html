@@ -36,6 +36,7 @@
   <link rel="stylesheet" href="https://unpkg.com/octomments/build/ocs-ui.min.css" />
   <script src="https://unpkg.com/octomments/build/ocs.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/timeago.js@4.0.2/dist/timeago.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <!-- Counter.dev -->
 <script>if (!sessionStorage.getItem("_swa") && document.referrer.indexOf(location.protocol + "//" + location.host) !== 0) { fetch("https://counter.dev/track?" + new URLSearchParams({ referrer: document.referrer, screen: screen.width + "x" + screen.height, user: "Wenjian.jiang@foxmail.com", utcoffset: "8" })) }; sessionStorage.setItem("_swa", "1");</script>
 </head>
@@ -65,10 +66,7 @@
 自称是比特币创造者中本聪（Satoshi Nakamoto），他提起的版权诉讼最终可能揭开了长达数年的谜团，即谁真正发明了数十亿美元的加密货币。诉讼的成功可能取决于Wright是否能够证明他确实撰写了白皮书，该白皮书最初列出了比特币背后的技术。据路透社报道，此案可能迫使英国法院权衡赖特是否是比特币的实际发明者。
         </p>
       </div>
-      <div class="body">
-        <p>
-          https://m.slashdot.org/story/384658
-        </p>
+      <div class="body" id="content">
       </div>
       <p class="comment-tips">和大家一起讨论一下吧~</p>
       <div id="comment"></div>
@@ -89,6 +87,9 @@
   }).init();
   // register share event
   document.querySelector('#share-link').onclick = handleShare
+  // parse markdown body
+  document.getElementById('content').innerHTML =
+      marked(https://m.slashdot.org/story/384658);
 </script>
 
 </html>

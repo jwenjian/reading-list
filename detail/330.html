@@ -33,6 +33,7 @@
   <link rel="stylesheet" href="https://unpkg.com/octomments/build/ocs-ui.min.css" />
   <script src="https://unpkg.com/octomments/build/ocs.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/timeago.js@4.0.2/dist/timeago.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <!-- Counter.dev -->
 <script>if (!sessionStorage.getItem("_swa") && document.referrer.indexOf(location.protocol + "//" + location.host) !== 0) { fetch("https://counter.dev/track?" + new URLSearchParams({ referrer: document.referrer, screen: screen.width + "x" + screen.height, user: "Wenjian.jiang@foxmail.com", utcoffset: "8" })) }; sessionStorage.setItem("_swa", "1");</script>
 </head>
@@ -61,15 +62,7 @@
           一个用 HTML + CSS + JS 实现的炫酷 Pokemon 卡片效果
         </p>
       </div>
-      <div class="body">
-        <p>
-          https://codepen.io/simeydotme/pen/PrQKgo
-
----
-
-![image](https://user-images.githubusercontent.com/25657798/116648032-ae621800-a9ae-11eb-91a7-9672172f639b.png)
-
-        </p>
+      <div class="body" id="content">
       </div>
       <p class="comment-tips">和大家一起讨论一下吧~</p>
       <div id="comment"></div>
@@ -90,6 +83,14 @@
   }).init();
   // register share event
   document.querySelector('#share-link').onclick = handleShare
+  // parse markdown body
+  document.getElementById('content').innerHTML =
+      marked(https://codepen.io/simeydotme/pen/PrQKgo
+
+---
+
+![image](https://user-images.githubusercontent.com/25657798/116648032-ae621800-a9ae-11eb-91a7-9672172f639b.png)
+);
 </script>
 
 </html>

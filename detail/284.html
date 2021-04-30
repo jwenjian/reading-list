@@ -33,6 +33,7 @@
   <link rel="stylesheet" href="https://unpkg.com/octomments/build/ocs-ui.min.css" />
   <script src="https://unpkg.com/octomments/build/ocs.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/timeago.js@4.0.2/dist/timeago.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <!-- Counter.dev -->
 <script>if (!sessionStorage.getItem("_swa") && document.referrer.indexOf(location.protocol + "//" + location.host) !== 0) { fetch("https://counter.dev/track?" + new URLSearchParams({ referrer: document.referrer, screen: screen.width + "x" + screen.height, user: "Wenjian.jiang@foxmail.com", utcoffset: "8" })) }; sessionStorage.setItem("_swa", "1");</script>
 </head>
@@ -61,10 +62,7 @@
           NASA 宣布，毅力号漫游车搭载的灵巧号直升飞机周一在火星上完成了历史性的首次自主飞行。这也是人类首次在另一个星球上进行动力控制飞行。NASA 在官网公布了灵巧号在悬浮时拍摄的黑白图像。灵巧号在首飞期间悬浮到约 3 米的高度，稳定悬浮了大约 30 秒，然后下降返回地面，总共持续了 39.1 秒。
         </p>
       </div>
-      <div class="body">
-        <p>
-          https://www.solidot.org/story?sid=67533
-        </p>
+      <div class="body" id="content">
       </div>
       <p class="comment-tips">和大家一起讨论一下吧~</p>
       <div id="comment"></div>
@@ -85,6 +83,9 @@
   }).init();
   // register share event
   document.querySelector('#share-link').onclick = handleShare
+  // parse markdown body
+  document.getElementById('content').innerHTML =
+      marked(https://www.solidot.org/story?sid=67533);
 </script>
 
 </html>

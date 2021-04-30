@@ -39,6 +39,7 @@
   <link rel="stylesheet" href="https://unpkg.com/octomments/build/ocs-ui.min.css" />
   <script src="https://unpkg.com/octomments/build/ocs.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/timeago.js@4.0.2/dist/timeago.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <!-- Counter.dev -->
 <script>if (!sessionStorage.getItem("_swa") && document.referrer.indexOf(location.protocol + "//" + location.host) !== 0) { fetch("https://counter.dev/track?" + new URLSearchParams({ referrer: document.referrer, screen: screen.width + "x" + screen.height, user: "Wenjian.jiang@foxmail.com", utcoffset: "8" })) }; sessionStorage.setItem("_swa", "1");</script>
 </head>
@@ -69,10 +70,7 @@
 京东还实现了数字人民币的跨行结算，即京东通过在交通银行开立的数字人民币钱包，向紫光数码在中国银行开立的数字人民币钱包进行了对公结算。此外，—— 今年1月，京东集团试点数字人民币发薪，为常驻上海、深圳、成都、长沙、西安的部分员工发放了首批数字人民币工资。
         </p>
       </div>
-      <div class="body">
-        <p>
-          https://www.pingwest.com/w/239262?utm_source=feed
-        </p>
+      <div class="body" id="content">
       </div>
       <p class="comment-tips">和大家一起讨论一下吧~</p>
       <div id="comment"></div>
@@ -93,6 +91,9 @@
   }).init();
   // register share event
   document.querySelector('#share-link').onclick = handleShare
+  // parse markdown body
+  document.getElementById('content').innerHTML =
+      marked(https://www.pingwest.com/w/239262?utm_source=feed);
 </script>
 
 </html>
