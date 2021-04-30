@@ -111,9 +111,6 @@ a:hover {
   text-align: left;
   min-height: 10vh;
   margin: auto auto;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
   padding: 1em;
   border-left: 2px solid #eee;
 }
@@ -122,6 +119,14 @@ a:hover {
   overflow-wrap: anywhere;
   word-break: break-all;
   word-wrap: break-word;
+}
+
+.body img {
+  width: 90%
+}
+
+.body hr {
+  display: none;
 }
 
 #comment {
