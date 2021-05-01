@@ -35,9 +35,10 @@
 
   <!-- style -->
   <link rel="stylesheet" href="main.css">
-  
-  <link rel="stylesheet" href="https://unpkg.com/octomments/build/ocs-ui.min.css" />
-  <script src="https://unpkg.com/octomments/build/ocs.min.js"></script>
+
+  <script src="https://utteranc.es/client.js" repo="jwenjian/reading-list" issue-number="[ENTER ISSUE NUMBER HERE]"
+    theme="preferred-color-scheme" crossorigin="anonymous" async>
+    </script>
 
   <style>
     p {
@@ -123,18 +124,8 @@
   </ol>
 
   <h5>前 5 名贡献者可在 README 及本页面获得专属展示位 🔥</h5>
-  
-  <div id="comment"></div>
+
+  <div class="utterances"></div>
 </body>
-  <script>
-  Octomments({
-    github: {
-      owner: 'jwenjian',
-      repo: 'reading-list',
-    },
-    issueNumber: 1,
-    renderer: [OctommentsRenderer, '#comment']
-  }).init();
-</script>
 
 </html>
