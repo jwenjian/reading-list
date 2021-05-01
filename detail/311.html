@@ -33,12 +33,10 @@
   </title>
 
   <link rel="stylesheet" href="detail.css">
-  <link rel="stylesheet" href="https://unpkg.com/octomments/build/ocs-ui.min.css" />
-  <script src="https://unpkg.com/octomments/build/ocs.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/timeago.js@4.0.2/dist/timeago.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-<!-- Counter.dev -->
-<script>if (!sessionStorage.getItem("_swa") && document.referrer.indexOf(location.protocol + "//" + location.host) !== 0) { fetch("https://counter.dev/track?" + new URLSearchParams({ referrer: document.referrer, screen: screen.width + "x" + screen.height, user: "Wenjian.jiang@foxmail.com", utcoffset: "8" })) }; sessionStorage.setItem("_swa", "1");</script>
+  <!-- Counter.dev -->
+  <script>if (!sessionStorage.getItem("_swa") && document.referrer.indexOf(location.protocol + "//" + location.host) !== 0) { fetch("https://counter.dev/track?" + new URLSearchParams({ referrer: document.referrer, screen: screen.width + "x" + screen.height, user: "Wenjian.jiang@foxmail.com", utcoffset: "8" })) }; sessionStorage.setItem("_swa", "1");</script>
 </head>
 
 <body>
@@ -68,27 +66,20 @@
       <div class="body" id="content">
       </div>
       <p class="comment-tips">和大家一起讨论一下吧~</p>
-      <div id="comment"></div>
+      <script src="https://utteranc.es/client.js" repo="jwenjian/reading-list" issue-number="311"
+        theme="preferred-color-scheme" crossorigin="anonymous" async>
+        </script>
     </div>
 
   </div>
 </body>
 <script src="detail.js"></script>
 <script>
-  // init comments
-  Octomments({
-    github: {
-      owner: 'jwenjian',
-      repo: 'reading-list',
-    },
-    issueNumber: 311,
-    renderer: [OctommentsRenderer, '#comment']
-  }).init();
   // register share event
   document.querySelector('#share-link').onclick = handleShare
   // parse markdown body
   document.getElementById('content').innerHTML =
-      marked(`https://www.pingwest.com/w/239293?utm_source=feed`);
+    marked(`https://www.pingwest.com/w/239293?utm_source=feed`);
 </script>
 
 </html>
