@@ -11,7 +11,7 @@ const octokit = new Octokit(
 );
 const issue_number = process.env.EVENT_ISSUE_NUMBER
 
-async function generateDetailPage(data) {
+async function generateIndexPage(data) {
   ejs.renderFile(
     `template/detail.ejs`,
     data,
