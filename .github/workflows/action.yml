@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - main
-  # issues:
-  #   types: [opened, edited, deleted]
+  issues:
+    types: [opened, edited]
   schedule:
     - cron: ' 0 0 * * * '
 
