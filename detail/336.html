@@ -79,7 +79,12 @@
   document.querySelector('#share-link').onclick = handleShare
   // parse markdown body
   document.getElementById('content').innerHTML =
-    marked(`https://github.com/banga/git-split-diffs`);
+    marked(`https://github.com/banga/git-split-diffs
+
+---
+
+![image](https://user-images.githubusercontent.com/25657798/116860325-f6de3780-ac33-11eb-96cc-8b33999d7c44.png)
+`);
 </script>
 
 </html>
