@@ -1,17 +1,12 @@
-name: 'Readling list data update'
+name: 'Update when single issue opened or edited'
 
 on:
-  push:
-    branches:
-      - main
-  # issues:
-  #   types: [opened, edited, deleted]
-  schedule:
-    - cron: ' 0 0 * * * '
+  issues:
+    types: [opened, edited]
 
 jobs:
-  feed-processor:
-    name: Update TIR
+  pages-updator:
+    name: Generating or updating issue detail page
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -24,13 +19,11 @@ jobs:
         run: |
           npm install ejs -g
           npm install
-      - name: Update issue data
-        run: node index.js
+      - name: Update issue data and generate HTML file
+        run: node single_issue.js
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Generate HTML file
-        run: |
-          ejs template/index.ejs -f template/data.json -o template/index.html
+          EVENT_ISSUE_NUMBER: ${{ github.event.issue.number }}
       - name: Copy to dist folder
         run: |
           rm -rf dist
