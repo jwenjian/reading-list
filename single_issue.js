@@ -67,7 +67,7 @@ async function main() {
   await generateIndexPage(data)
 
   if (the_issue) {
-    await generateDetailPage()
+    await generateDetailPage(the_issue[0])
   }
 
   console.log("Detail page generated!")
