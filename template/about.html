@@ -45,10 +45,26 @@
       text-align: left;
     }
 
-    body {
-      padding-left: 25vw;
-      padding-right: 25vw;
+    :root {
+      --pd-left: 5vw;
+      --pd-right: 5vw;
     }
+    
+    @media screen and (min-width: 768px) {
+      :root {
+        --pd-left: 25vw;
+        --pd-right: 25vw;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+    }
+    
+    body {
+      padding-left: var(--pd-left);
+      padding-right: var(--pd-right);
+    }
+    
   </style>
   <!-- Counter.dev -->
   <script>if (!sessionStorage.getItem("_swa") && document.referrer.indexOf(location.protocol + "//" + location.host) !== 0) { fetch("https://counter.dev/track?" + new URLSearchParams({ referrer: document.referrer, screen: screen.width + "x" + screen.height, user: "Wenjian.jiang@foxmail.com", utcoffset: "8" })) }; sessionStorage.setItem("_swa", "1");</script>
