@@ -1,6 +1,6 @@
 name: 提交文章链接
 description: 提交一个 科技 / 编程 / 开源 / 科学 或者其他你认为有趣或值得分享的文章链接
-title: "[TIR]: "
+title: "[请简要描述文章内容] "
 labels: []
 assignees:
   - jwenjian
@@ -20,8 +20,8 @@ body:
   - type: textarea
     id: what-happened
     attributes:
-      label: 内容简介
-      description: 请用一句话简要描述文章内容 （拒绝标题党）?
+      label: 内容简介 / 观点看法
+      description: 随心所欲，说出你的观点，看法或评价
       placeholder: 这是一个社区驱动的高质量阅读列表网站，分享最新最有趣的科技资讯。
       value: "TIR: "
     validations:
