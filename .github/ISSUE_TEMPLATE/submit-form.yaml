@@ -1,0 +1,36 @@
+name: 提交文章链接
+description: 提交一个 科技 / 编程 / 开源 / 科学 或者其他你认为有趣或值得分享的文章链接
+title: "[TIR]: "
+labels: []
+assignees:
+  - jwenjian
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢你的提交，你的每一次提交都会让 TIR.cool 社区更加活跃!
+  - type: input
+    id: url
+    attributes:
+      label: 文章链接
+      description: 请提供文章链接，以 http:// 或者 https:// 开头
+      placeholder: https://tir.cool
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: 内容简介
+      description: 请用一句话简要描述文章内容 （拒绝标题党）?
+      placeholder: 这是一个社区驱动的高质量阅读列表网站，分享最新最有趣的科技资讯。
+      value: "A bug happened!"
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: 链接提交规范
+      description: 请移步至 Wiki -> 什么样的文章可以提交到 TIR.cool 确认所提交的文章适合提交至 TIR.cool
+      options:
+        - label: 我确认这篇文章符合要求
+          required: true
