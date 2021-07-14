@@ -23,7 +23,7 @@ body:
       label: 内容简介
       description: 请用一句话简要描述文章内容 （拒绝标题党）?
       placeholder: 这是一个社区驱动的高质量阅读列表网站，分享最新最有趣的科技资讯。
-      value: ""
+      value: "TIR: "
     validations:
       required: true
   - type: checkboxes
