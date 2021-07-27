@@ -76,3 +76,5 @@ TIR 的解决思路是：
 
 - <a href="https://github.com/lvwzhen"><img src="https://avatars.githubusercontent.com/u/2337506?v=4" width="80px"/></a> [@lvwzhen](https://github.com/lvwzhen) 
 
+- <a href="https://github.com/temberature"><img src="https://avatars.githubusercontent.com/u/3735863?v=4" width="80px"/></a> [@temberature](https://github.com/temberature) 
+
