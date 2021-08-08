@@ -3,6 +3,7 @@ const fs = require('fs')
 const now = new Date()
 const startOfTheDay = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 0, 0, 0, 0)
 const ejs = require('ejs')
+const axios = require('axios').default;
 
 const octokit = new Octokit(
   {
@@ -11,24 +12,35 @@ const octokit = new Octokit(
 );
 
 async function main() {
-  let data = {
-    update_at: now,
-    today: [],
-    recent: []
-  }
-  const resp = await octokit.issues.listForRepo({
-    owner: 'jwenjian',
-    repo: 'reading-list',
-    state: 'open',
-    per_page: 100
-  })
+  for (let n = 1; n <= 6; n++) {
+    const resp = await octokit.issues.listForRepo({
+      owner: 'jwenjian',
+      repo: 'reading-list',
+      state: 'open',
+      per_page: 100,
+      page: n
+    })
 
-  if (!resp || resp.status != 200) {
-    console.error('Cannot get response from GitHub')
-    return
+    if (!resp || resp.status != 200) {
+      console.error('Cannot get response from GitHub')
+      return
+    }
+
+    let data = resp.data
+    for (let i = 0; i < data.length; i ++) {
+      let issue = data[i]
+      axios.post('https://tir.jwenjian.workers.dev/api/push', {
+        API_KEY: 'changeit',
+        data: {
+          title: issue.title,
+          description: issue.body,
+          url: issue.body,
+          timestamp: `${Date.parse(issue.create_at)}`
+        }
+      })
+    }
   }
   
-  console.log(resp.data)
 }
 
 main()
