@@ -1,0 +1,30 @@
+name: 'Sync data to yaml'
+
+on:
+  push:
+    branches:
+      - main
+  issues:
+    types: [opened, edited]
+  schedule:
+    - cron: ' 0 0 * * * '
+
+jobs:
+  feed-processor:
+    name: Update TIR
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@main
+        with:
+          node-version: '12'
+      - name: Install dependencies
+        run: |
+          npm install ejs -g
+          npm install
+      - name: Sync issue data
+        run: node sync.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
