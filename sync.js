@@ -42,7 +42,7 @@ async function main() {
           "fields": {
             "title": issue.title,
             "url": issue.body,
-            "description": issue.body
+            "description": issue.body,
             "created_at": Date.parse(issue.created_at)
           }
         }
