@@ -18,6 +18,7 @@
   "homepage": "https://github.com/jwenjian/reading-list#readme",
   "dependencies": {
     "@octokit/rest": "^18.3.4",
-    "ejs": "^3.1.6"
+    "ejs": "^3.1.6",
+    "axios": "0.21.1"
   }
 }
