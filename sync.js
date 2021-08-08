@@ -29,7 +29,7 @@ async function main() {
     let data = resp.data
     for (let i = 0; i < data.length; i ++) {
       let issue = data[i]
-      axios.post('https://tir.jwenjian.workers.dev/api/push', {
+      axios.post('https://tir.jwenjian.workers.dev/api/publish', {
         API_KEY: 'changeit',
         data: {
           title: issue.title,
@@ -38,6 +38,7 @@ async function main() {
           timestamp: `${Date.parse(issue.create_at)}`
         }
       }).then(resp => {
+        console.log(resp.status)
         console.log(`${issue.number} synced`)
       }).catch(err => {
         console.error(err)
