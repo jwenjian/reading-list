@@ -34,8 +34,8 @@ async function main() {
         data: {
           title: issue.title,
           description: issue.body,
-          url: issue.body,
-          timestamp: `${Date.parse(issue.create_at)}`
+          url: issue.html_url,
+          timestamp: `${Date.parse(issue.created_at)}`
         }
       }).then(resp => {
         console.log(resp.status)
