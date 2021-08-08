@@ -4,6 +4,13 @@ const now = new Date()
 const startOfTheDay = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 0, 0, 0, 0)
 const ejs = require('ejs')
 const axios = require('axios').default;
+// 如果不能使用 es6 import，可用 const Vika = require('@vikadata/vika').default; 代替
+import { Vika } from "@vikadata/vika";
+
+const vika = new Vika({ token: process.env.VIKA_KEY, fieldKey: "name" });
+// 通过 datasheetId 来指定要从哪张维格表操作数据。
+const datasheet = vika.datasheet("dstQT8oKpeXW9q3nc9");
+
 
 const octokit = new Octokit(
   {
@@ -29,20 +36,24 @@ async function main() {
     let data = resp.data
     for (let i = 0; i < data.length; i ++) {
       let issue = data[i]
-      axios.post('https://tir.jwenjian.workers.dev/api/publish', {
-        API_KEY: 'changeit',
-        data: {
-          title: issue.title,
-          description: issue.body,
-          url: issue.html_url,
-          timestamp: `${Date.parse(issue.created_at)}`
+      // add 方法接收一个数组值，可以同时创建多条 record，单次请求可最多创建10条 record
+      datasheet.records.create([
+        {
+          "fields": {
+            "title": issue.title,
+            "url": issue.body,
+            "description": issue.body
+            "created_at": Date.parse(issue.created_at)
+          }
         }
-      }).then(resp => {
-        console.log(resp.status)
-        console.log(`${issue.number} synced`)
-      }).catch(err => {
-        console.error(err)
+      ]).then(response => {
+        if (response.success) {
+          console.log(response.data);
+        } else {
+          console.error(response);
+        }
       })
+
     }
   }
   
