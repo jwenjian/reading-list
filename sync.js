@@ -37,6 +37,10 @@ async function main() {
           url: issue.body,
           timestamp: `${Date.parse(issue.create_at)}`
         }
+      }).then(resp => {
+        console.log(`${issue.number} synced`)
+      }).catch(err => {
+        console.error(err)
       })
     }
   }
