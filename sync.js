@@ -5,7 +5,7 @@ const startOfTheDay = new Date(now.getFullYear(), now.getMonth(), now.getDate(),
 const ejs = require('ejs')
 const axios = require('axios').default;
 // 如果不能使用 es6 import，可用 const Vika = require('@vikadata/vika').default; 代替
-import { Vika } from "@vikadata/vika";
+const Vika = require('@vikadata/vika').default;
 
 const vika = new Vika({ token: process.env.VIKA_KEY, fieldKey: "name" });
 // 通过 datasheetId 来指定要从哪张维格表操作数据。
