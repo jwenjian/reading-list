@@ -28,3 +28,4 @@ jobs:
         run: node sync.js
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VIKA_KEY: ${{ secrets.VIKA_KEY }}
