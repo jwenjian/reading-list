@@ -26,11 +26,3 @@ body:
       value: "TIR: "
     validations:
       required: true
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: 链接提交规范
-      description: 请移步至 Wiki -> 什么样的文章可以提交到 TIR.cool 确认所提交的文章适合提交至 TIR.cool
-      options:
-        - label: 我确认这篇文章符合要求
-          required: true
