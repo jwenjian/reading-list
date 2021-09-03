@@ -1,3 +1,7 @@
+> 由于前段时间移动线路抽风，连续两周都无法访问 GitHub API, 目前已经将数据迁移到了维格表(vika.cn). 原先提交 Issue 的形式暂时无法更新到页面。
+> 正在筹划一个新的页面，届时可直接在页面提交。
+> 另外，推荐用 RSS 阅读器订阅 https://tir.jwenjian.workers.dev/feed.xml
+
 # TIR
 
 > TIR, 打造一个社区驱动的高质量阅读列表.
