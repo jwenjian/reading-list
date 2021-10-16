@@ -7,8 +7,7 @@ const vikaClient = new Vika({ token: process.env.VIKA_KEY, fieldKey: "name" });
 // 通过 datasheetId 来指定要从哪张维格表操作数据。
 const datasheet = vikaClient.datasheet("dstWxz5xDhi69QnmbV");
 
-const RSS_TEMPLATE_HEADER = `
-<?xml version="1.0" encoding="UTF-8"?>
+const RSS_TEMPLATE_HEADER = `<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="/rss.xsl" type="text/xsl"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
