@@ -22,6 +22,8 @@ jobs:
       - name: Run Script
         run: |
           node index.js
+        env:
+          VIKA_KEY: ${{ secretes.VIKA_KEY }}
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
