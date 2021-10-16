@@ -59,7 +59,8 @@ async function generateFeed() {
 
   console.log(rss)
 
-  fs.writeFileSync('feed.xml', rss)
+  fs.writeFileSync('feed.xml.new', rss)
+  fs.renameSync("feed.xml.new", "feed.xml")
 }
 
 
