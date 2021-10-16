@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/jwenjian/reading-list#readme",
   "dependencies": {
-    "@vikadata/vika": "1.0.3",
-    "node-rss": "1.0.5"
+    "@vikadata/vika": "1.0.3"
   }
 }
