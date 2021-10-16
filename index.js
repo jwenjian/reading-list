@@ -36,22 +36,14 @@ async function generateFeed() {
   const resp = await datasheet.records.query({viewId: "viwLTjftwvAah", fieldKey: "name", page: "50"})
   
   console.log(resp)
-  console.log("1")
-
-  const data = resp.data
-  console.log("2")
-  if (!data.success) {
-    console.log("3")
+  if (!resp.success) {
     process.exit(-1)
     return
   }
 
-  console.log("4")
+  const data = resp.data
 
   let items = data.records
-  console.log("5")
-  console.log(data)
-  console.log(items)
   let output = '';
   for (let i = 0; i < items.length; i++) {
     let content = items[i]
