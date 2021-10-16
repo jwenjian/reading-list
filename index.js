@@ -25,7 +25,7 @@ const RSS_TEMPLATE_FOOTER = `</channel></rss>`
 
 async function main() {
 
-  const rssText = await generateFeed();
+  await generateFeed();
 }
 
 /**
@@ -59,8 +59,8 @@ async function generateFeed() {
   let rss = buildRssXml(output);
 
   console.log(rss)
-
-  return new Promise.resolve(rss)
+  
+  fs.writeFileSync('feed.xml', rss)
 }
 
 
