@@ -48,7 +48,7 @@ async function generateFeed() {
   }
 
 
-  let items = data.data.records
+  let items = data.records
   console.log(data)
   console.log(items)
   let output = '';
@@ -64,6 +64,8 @@ async function generateFeed() {
   }
 
   let rss = buildRssXml(output);
+
+  console.log(rss)
 
   return new Promise.resolve(rss)
 }
