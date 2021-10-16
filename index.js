@@ -26,10 +26,6 @@ const RSS_TEMPLATE_FOOTER = `</channel></rss>`
 async function main() {
 
   const rssText = await generateFeed();
-
-  fs.writeFileSync('feed.xml', rssText)
-
-  console.log('ok')
 }
 
 /**
@@ -40,15 +36,20 @@ async function generateFeed() {
   const resp = await datasheet.records.query({viewId: "viwLTjftwvAah", fieldKey: "name", page: "50"})
   
   console.log(resp)
+  console.log("1")
 
   const data = resp.data
+  console.log("2")
   if (!data.success) {
+    console.log("3")
     process.exit(-1)
     return
   }
 
+  console.log("4")
 
   let items = data.records
+  console.log("5")
   console.log(data)
   console.log(items)
   let output = '';
