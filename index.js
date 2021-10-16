@@ -32,10 +32,9 @@ async function main() {
  * Generate Feed XML
  */
 async function generateFeed() {
-  
-  const resp = await datasheet.records.query({viewId: "viwLTjftwvAah", fieldKey: "name", page: "50"})
-  
-  console.log(resp)
+
+  const resp = await datasheet.records.query({ viewId: "viwLTjftwvAah", fieldKey: "name", maxRecords: 50 })
+
   if (!resp.success) {
     process.exit(-1)
     return
@@ -49,7 +48,7 @@ async function generateFeed() {
     let content = items[i]
     output += `
     <item>
-      <title>${content.fields.title}</title>
+      <title>${ encodeHtmlChars(content.fields.title) }</title>
       <pubDate>${new Date(content.fields.created_at)}</pubDate>
       <link>${content.fields.url}</link>
       <description><![CDATA[${content.fields.description}<br/><br/><br/><hr/><br/>欢迎将此 RSS 分享给你的朋友]]></description>
@@ -59,13 +58,25 @@ async function generateFeed() {
   let rss = buildRssXml(output);
 
   console.log(rss)
-  
+
   fs.writeFileSync('feed.xml', rss)
 }
 
 
 function buildRssXml(output) {
   return RSS_TEMPLATE_HEADER + output + RSS_TEMPLATE_FOOTER;
+}
+
+function encodeHtmlChars(input) {
+  let s = "";
+  if (input.length == 0) return "";
+  s = input.replace(/&/g, "&amp;");
+  s = s.replace(/</g, "&lt;");
+  s = s.replace(/>/g, "&gt;");
+  s = s.replace(/ /g, "&nbsp;");
+  s = s.replace(/\'/g, "&#39;");
+  s = s.replace(/\"/g, "&quot;");
+  return s;
 }
 
 main()
