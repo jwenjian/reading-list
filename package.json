@@ -1,0 +1,22 @@
+{
+  "name": "reading-list",
+  "version": "1.0.0",
+  "description": "![issues](https://badgen.net/github/issues/jwenjian/reading-list) ![watchers](https://badgen.net/github/watchers/jwenjian/reading-list) ![visitors](https://visitor-badge.glitch.me/badge?page_id=jwenjian.readling-list)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jwenjian/reading-list.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jwenjian/reading-list/issues"
+  },
+  "homepage": "https://github.com/jwenjian/reading-list#readme",
+  "dependencies": {
+    "@vikadata/vika": "1.0.3"
+  }
+}
