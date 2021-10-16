@@ -1,13 +1,9 @@
 name: 'Readling list data update'
 
 on:
-  push:
-    branches:
-      - main
-  issues:
-    types: [opened, edited]
+  workflow_dispatch: # manuall
   schedule:
-    - cron: ' 0 0 * * * '
+    - cron: '0/10 * * * * ' # every 10 min
 
 jobs:
   feed-processor:
@@ -22,24 +18,14 @@ jobs:
           node-version: '12'
       - name: Install dependencies
         run: |
-          npm install ejs -g
           npm install
-      - name: Update issue data
-        run: node index.js
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Generate HTML file
+      - name: Run Script
         run: |
-          ejs template/index.ejs -f template/data.json -o template/index.html
-      - name: Copy to dist folder
-        run: |
-          rm -rf dist
-          mkdir dist
-          cp -r template/* dist/
+          node index.js
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: dist # The folder the action should deploy.
+          FOLDER: . # The folder the action should deploy.
           CLEAN: true # Automatically remove deleted files from the deploy branch

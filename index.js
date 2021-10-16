@@ -1,76 +1,76 @@
-const { Octokit } = require("@octokit/rest")
 const fs = require('fs')
 const now = new Date()
-const startOfTheDay = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 0, 0, 0, 0)
-const ejs = require('ejs')
+// 如果不能使用 es6 import，可用 const Vika = require('@vikadata/vika').default; 代替
+const Vika = require('@vikadata/vika').default;
 
-const octokit = new Octokit(
-  {
-    auth: process.env.GITHUB_TOKEN
-  }
-);
+const vikaClient = new Vika({ token: process.env.VIKA_KEY, fieldKey: "name" });
+// 通过 datasheetId 来指定要从哪张维格表操作数据。
+const datasheet = vikaClient.datasheet("dstWxz5xDhi69QnmbV");
 
-async function generateDetailPage() {
-  // detail page generation of issues in today
-  let issues = JSON.parse(fs.readFileSync('template/data.json')).today
-  issues.forEach(i => {
-    ejs.renderFile(
-      `template/detail.ejs`,
-      i,
-      (err, str) => {
-        fs.writeFileSync(`template/detail/${i.number}.html`, str)
-      }
-    )
-  });
+const RSS_TEMPLATE_HEADER = `
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/rss.xsl" type="text/xsl"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>
+    Today I Read
+</title>
+ <link>
+https://todayiread.vercel.app
+</link>
+ <description>Today I Read, 一个社区共建的高质量阅读列表</description>
+`
+const RSS_TEMPLATE_FOOTER = `</channel></rss>`
 
-  // detail page generation of issues in recent
-  issues = JSON.parse(fs.readFileSync('template/data.json')).recent
-  issues.forEach(i => {
-    ejs.renderFile(
-      `template/detail.ejs`,
-      i,
-      (err, str) => {
-        fs.writeFileSync(`template/detail/${i.number}.html`, str)
-      }
-    )
-  });
-}
 
 async function main() {
-  let data = {
-    update_at: now,
-    today: [],
-    recent: []
-  }
-  const resp = await octokit.issues.listForRepo({
-    owner: 'jwenjian',
-    repo: 'reading-list',
-    state: 'open',
-    per_page: 50
-  })
 
-  if (!resp || resp.status != 200) {
-    console.error('Cannot get response from GitHub')
+  const rssText = await generateFeed();
+
+  fs.writeFileSync('feed.xml', rssText)
+
+  console.log('ok')
+}
+
+/**
+ * Generate Feed XML
+ */
+async function generateFeed() {
+  
+  const resp = await datasheet.records.query({viewId: "viwLTjftwvAah", fieldKey: "name", page: "50"})
+  
+  console.log(resp)
+
+  const data = resp.data
+  if (!data.success) {
+    process.exit(-1)
     return
   }
 
-  data.today = resp.data.filter(item => {
-    return Date.parse(item.created_at) > startOfTheDay.getTime()
-  })
 
-  let rest = resp.data.slice(resp.data.indexOf(data.today[data.today.length - 1]) + 1)
+  let items = data.data.records
+  console.log(data)
+  console.log(items)
+  let output = '';
+  for (let i = 0; i < items.length; i++) {
+    let content = items[i]
+    output += `
+    <item>
+      <title>${content.fields.title}</title>
+      <pubDate>${new Date(content.fields.created_at)}</pubDate>
+      <link>${content.fields.url}</link>
+      <description><![CDATA[${content.fields.description}<br/><br/><br/><hr/><br/>欢迎将此 RSS 分享给你的朋友]]></description>
+    </item>`
+  }
 
-  data.recent = rest
+  let rss = buildRssXml(output);
 
-  const issues = resp.data
-  console.log(`${issues.length} issues got from GitHub`)
+  return new Promise.resolve(rss)
+}
 
-  fs.writeFileSync('template/data.json', JSON.stringify(data))
-  console.log('Issues write to data.json')
 
-  await generateDetailPage()
-
-  console.log("Detail page generated!")
+function buildRssXml(output) {
+  return RSS_TEMPLATE_HEADER + output + RSS_TEMPLATE_FOOTER;
 }
 
 main()
