@@ -70,10 +70,8 @@ function buildRssXml(output) {
 function encodeHtmlChars(input) {
   let s = "";
   if (input.length == 0) return "";
-  s = input.replace(/&/g, "&amp;");
   s = s.replace(/</g, "&lt;");
   s = s.replace(/>/g, "&gt;");
-  s = s.replace(/ /g, "&nbsp;");
   s = s.replace(/\'/g, "&#39;");
   s = s.replace(/\"/g, "&quot;");
   return s;
