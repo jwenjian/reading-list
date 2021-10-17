@@ -11,6 +11,12 @@ https://todayiread.vercel.app
  <description>Today I Read, 一个社区共建的高质量阅读列表</description>
 
     <item>
+      <title>Git 命令大全，交互式的方式找到你想要的命令</title>
+      <pubDate>Sun Oct 17 2021 00:20:13 GMT+0000 (Coordinated Universal Time)</pubDate>
+      <link>https://gitexplorer.com/</link>
+      <description><![CDATA[https://gitexplorer.com/<br/><br/><br/><hr/><br/>欢迎将此 RSS 分享给你的朋友]]></description>
+    </item>
+    <item>
       <title>锤子便签样式的markdown 主题</title>
       <pubDate>Sat Oct 16 2021 07:23:51 GMT+0000 (Coordinated Universal Time)</pubDate>
       <link>https://github.com/nihaojob/markdown-css-smartisan</link>
@@ -307,10 +313,4 @@ Astro 可以在室内自由移动，并支持语音操控，可以随时帮助�
       <pubDate>Sat Sep 18 2021 04:22:45 GMT+0000 (Coordinated Universal Time)</pubDate>
       <link>https://m.toutiaocdn.com/i7008891358127702560/</link>
       <description><![CDATA[https://m.toutiaocdn.com/i7008891358127702560/?app=news_article&timestamp=1631938918&use_new_style=1&req_id=202109181221580102120700974B365F54&group_id=7008891358127702560<br/><br/><br/><hr/><br/>欢迎将此 RSS 分享给你的朋友]]></description>
-    </item>
-    <item>
-      <title>iPhone13包装盒曝光 将采用纸质撕拉式设计</title>
-      <pubDate>Sat Sep 18 2021 09:17:17 GMT+0000 (Coordinated Universal Time)</pubDate>
-      <link>https://www.pingwest.com/w/249943?utm_source=feed</link>
-      <description><![CDATA[https://www.pingwest.com/w/249943?utm_source=feed<br/><br/><br/><hr/><br/>欢迎将此 RSS 分享给你的朋友]]></description>
     </item></channel></rss>
