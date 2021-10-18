@@ -23,6 +23,12 @@ https://todayiread.vercel.app
       <description><![CDATA[https://www.pingwest.com/w/251473?utm_source=feed<br/><br/><br/><hr/><br/>欢迎将此 RSS 分享给你的朋友]]></description>
     </item>
     <item>
+      <title>据 Tech 星球报道，微信目前正在灰度测试新功能，让用户可以在原有的绑定了手机号的微信账号外，无需新的手机号注册新微信号。</title>
+      <pubDate>Mon Oct 18 2021 13:52:19 GMT+0000 (Coordinated Universal Time)</pubDate>
+      <link>https://www.pingwest.com/w/251538?utm_source=feed</link>
+      <description><![CDATA[https://www.pingwest.com/w/251538?utm_source=feed<br/><br/><br/><hr/><br/>欢迎将此 RSS 分享给你的朋友]]></description>
+    </item>
+    <item>
       <title>Git 命令大全，交互式的方式找到你想要的命令</title>
       <pubDate>Sun Oct 17 2021 00:20:13 GMT+0000 (Coordinated Universal Time)</pubDate>
       <link>https://gitexplorer.com/</link>
@@ -307,10 +313,4 @@ Astro 可以在室内自由移动，并支持语音操控，可以随时帮助�
       <pubDate>Sat Sep 18 2021 22:09:06 GMT+0000 (Coordinated Universal Time)</pubDate>
       <link>https://www.pingwest.com/w/249997?utm_source=feed</link>
       <description><![CDATA[https://www.pingwest.com/w/249997?utm_source=feed<br/><br/><br/><hr/><br/>欢迎将此 RSS 分享给你的朋友]]></description>
-    </item>
-    <item>
-      <title>英特尔准备通过 Platform Firmware Runtime Update 和 Telemetry 驱动代码为 Linux 内核引入 Seamless Update 功能，即无需重启就能更新固件。</title>
-      <pubDate>Sun Sep 19 2021 11:11:04 GMT+0000 (Coordinated Universal Time)</pubDate>
-      <link>https://www.solidot.org/story?sid=68993</link>
-      <description><![CDATA[https://www.solidot.org/story?sid=68993<br/><br/><br/><hr/><br/>欢迎将此 RSS 分享给你的朋友]]></description>
     </item></channel></rss>
