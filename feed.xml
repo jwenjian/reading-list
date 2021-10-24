@@ -11,6 +11,12 @@ https://todayiread.vercel.app
  <description>Today I Read, 一个社区共建的高质量阅读列表</description>
 
     <item>
+      <title>JavaScript ninja code</title>
+      <pubDate>Sun Oct 24 2021 00:20:24 GMT+0000 (Coordinated Universal Time)</pubDate>
+      <link>https://javascript.info/ninja-code</link>
+      <description><![CDATA[https://javascript.info/ninja-code<br/><br/><br/><hr/><br/>欢迎将此 RSS 分享给你的朋友]]></description>
+    </item>
+    <item>
       <title>交通摄像头将女子识别为汽车</title>
       <pubDate>Fri Oct 22 2021 02:50:53 GMT+0000 (Coordinated Universal Time)</pubDate>
       <link>https://www.solidot.org/story?sid=69330</link>
@@ -305,10 +311,4 @@ https://todayiread.vercel.app
       <pubDate>Wed Sep 29 2021 22:43:52 GMT+0000 (Coordinated Universal Time)</pubDate>
       <link>https://www.pingwest.com/w/250695?utm_source=feed</link>
       <description><![CDATA[https://www.pingwest.com/w/250695?utm_source=feed<br/><br/><br/><hr/><br/>欢迎将此 RSS 分享给你的朋友]]></description>
-    </item>
-    <item>
-      <title>饿了么 App 正式上线对老年人更加友好的长辈模式</title>
-      <pubDate>Wed Sep 29 2021 22:44:38 GMT+0000 (Coordinated Universal Time)</pubDate>
-      <link>https://www.pingwest.com/w/250688?utm_source=feed</link>
-      <description><![CDATA[https://www.pingwest.com/w/250688?utm_source=feed<br/><br/><br/><hr/><br/>欢迎将此 RSS 分享给你的朋友]]></description>
     </item></channel></rss>
