@@ -3,7 +3,7 @@ name: 'Readling list data update'
 on:
   workflow_dispatch: # manuall
   schedule:
-    - cron: '0/10 * * * * ' # every 10 min
+    - cron: '0 0/1 * * * ' # every 1 hour
 
 jobs:
   feed-processor:
